@@ -3,10 +3,54 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:SapLinksUtility2"
         mc:Ignorable="d"
-        Title="SAP Links Utility" Height="450" Width="800">
+        Title="SAP Links Utility" Height="400" Width="800" Style="{DynamicResource WindowStyle1}">
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="ToolsButton" Grid.Column="0" Grid.Row="0" Content="Tools" HorizontalAlignment="Left" VerticalAlignment="Top" Width="105" 
+                Style="{DynamicResource ToolButtonStyle}" Click="ToolsButton_Click">
+            <Button.LayoutTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-90"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Button.LayoutTransform>
+        </Button>
+        <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled" Grid.Column="1" Grid.Row="0">
+            <StackPanel x:Name="ToolsPanel" HorizontalAlignment="Left" Height="Auto" VerticalAlignment="Top" Width="Auto"
+                    Orientation="Horizontal" CanHorizontallyScroll="True" ScrollViewer.CanContentScroll="True" Visibility="Collapsed"
+                    ScrollViewer.VerticalScrollBarVisibility="Disabled" ScrollViewer.HorizontalScrollBarVisibility="Auto" Panel.ZIndex="99">
+                <Button x:Name="RepositoryButton" Style="{DynamicResource CategoryButtonStyle}">
+                    <TextBlock Style="{DynamicResource CategoryTextBlockStyle}" VerticalAlignment="Center" HorizontalAlignment="Center">Maintain<LineBreak/>Repository</TextBlock>
+                </Button>
+                <Button x:Name="SAPInfoButton" Style="{DynamicResource CategoryButtonStyle}">
+                    <TextBlock Style="{DynamicResource CategoryTextBlockStyle}" HorizontalAlignment="Center" VerticalAlignment="Center">Maintain<LineBreak/>SAP<LineBreak/>Information</TextBlock>
+                </Button>
+                <Button x:Name="BuilderButton" Style="{DynamicResource CategoryButtonStyle}">
+                    <TextBlock Style="{DynamicResource CategoryTextBlockStyle}">Builder<LineBreak/>Tools</TextBlock>
+                </Button>
+                <Button x:Name="UtilityButton" Style="{DynamicResource CategoryButtonStyle}">
+                    <TextBlock Style="{DynamicResource CategoryTextBlockStyle}">Utility<LineBreak/>Tools</TextBlock>
+                </Button>
+                <Button x:Name="SettingsButton" Style="{DynamicResource CategoryButtonStyle}">
+                    <TextBlock Style="{DynamicResource CategoryTextBlockStyle}">Settings</TextBlock>
+                </Button>
+                <Button x:Name="AboutButton" Style="{DynamicResource CategoryButtonStyle}">
+                    <TextBlock Style="{DynamicResource CategoryTextBlockStyle}">About</TextBlock>
+                </Button>
+            </StackPanel>
+        </ScrollViewer>
+        <ScrollViewer Grid.Row="0" Grid.Column="1" Grid.RowSpan="2" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
+            <Frame/>
+        </ScrollViewer>
     </Grid>
 </Window>

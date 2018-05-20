@@ -24,5 +24,17 @@ namespace SapLinksUtility2
         {
             InitializeComponent();
         }
+
+        private void ToolsButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (ToolsPanel.Visibility == Visibility.Collapsed)
+            {
+                ToolsPanel.Visibility = Visibility.Visible;
+            }
+            else
+            {
+                ToolsPanel.Visibility = Visibility.Collapsed;
+            }
+        }
     }
 }
