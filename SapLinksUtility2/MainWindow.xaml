@@ -25,7 +25,7 @@
                 </TransformGroup>
             </Button.LayoutTransform>
         </Button>
-        <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled" Grid.Column="1" Grid.Row="0">
+        <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled" Grid.Column="1" Grid.Row="0" Panel.ZIndex="99" CanContentScroll="True">
             <StackPanel x:Name="ToolsPanel" HorizontalAlignment="Left" Height="Auto" VerticalAlignment="Top" Width="Auto"
                     Orientation="Horizontal" CanHorizontallyScroll="True" ScrollViewer.CanContentScroll="True" Visibility="Collapsed"
                     ScrollViewer.VerticalScrollBarVisibility="Disabled" ScrollViewer.HorizontalScrollBarVisibility="Auto" Panel.ZIndex="99">
@@ -49,8 +49,8 @@
                 </Button>
             </StackPanel>
         </ScrollViewer>
-        <ScrollViewer Grid.Row="0" Grid.Column="1" Grid.RowSpan="2" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto">
-            <Frame/>
+        <ScrollViewer Grid.Row="0" Grid.Column="1" Grid.RowSpan="2" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" CanContentScroll="True">
+            <Frame ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.CanContentScroll="True"/>
         </ScrollViewer>
     </Grid>
 </Window>
