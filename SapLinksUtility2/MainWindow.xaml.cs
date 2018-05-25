@@ -23,17 +23,20 @@ namespace SapLinksUtility2
         public MainWindow()
         {
             InitializeComponent();
+            MainWindowFrame.Content = new WelcomePage();
         }
 
         private void ToolsButton_Click(object sender, RoutedEventArgs e)
         {
-            if (ToolsPanel.Visibility == Visibility.Collapsed)
+            if (ToolsPanelScrollViewer.Visibility == Visibility.Collapsed)
             {
-                ToolsPanel.Visibility = Visibility.Visible;
+                MainWindowFrame.Visibility = Visibility.Hidden;
+                ToolsPanelScrollViewer.Visibility = Visibility.Visible;
             }
             else
             {
-                ToolsPanel.Visibility = Visibility.Collapsed;
+                ToolsPanelScrollViewer.Visibility = Visibility.Collapsed;
+                MainWindowFrame.Visibility = Visibility.Visible;
             }
         }
     }

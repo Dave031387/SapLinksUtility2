@@ -5,13 +5,26 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:SapLinksUtility2"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
+      d:DesignHeight="482.4" d:DesignWidth="800"
       Title="WelcomePage" ScrollViewer.CanContentScroll="True" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto">
 
     <Grid>
-        <DockPanel>
-            <Label DockPanel.Dock="Top" HorizontalContentAlignment="Center" FontFamily="Segoe UI Black" FontSize="36" Padding="15,20" ScrollViewer.CanContentScroll="True">Welcome to the SAP Links Utility</Label>
-            <Image DockPanel.Dock="Top" Source="pack://siteoforigin:,,,/Resources/CELOGO.PNG" ScrollViewer.CanContentScroll="True" Margin="20"/>
-        </DockPanel>
+        <StackPanel x:Name="WelcomePage1">
+            <TextBlock FontFamily="Segoe UI Black" FontSize="36" Padding="15,20" ScrollViewer.CanContentScroll="True"
+                       Foreground="{StaticResource ToolsPageTitle}" TextAlignment="Center">
+                <TextBlock.Effect>
+                    <DropShadowEffect Color="Black"/>
+                </TextBlock.Effect>
+                Welcome to the SAP Links Utility
+            </TextBlock>
+            <TextBlock TextAlignment="Center" Foreground="{StaticResource MediumGreenBrush}">
+                Design and code by David R Slocum
+            </TextBlock>
+            <Image Source="Resources/CELOGO.PNG" ScrollViewer.CanContentScroll="True" Margin="20"/>
+            <TextBlock TextAlignment="Center" Foreground="{StaticResource LightGreenBrush}" Background="{StaticResource BlackBrush}"
+                       Padding="0,10" Margin="0,0,30,0">
+                Copyright © 2018 - Consumers Energy
+            </TextBlock>
+        </StackPanel>
     </Grid>
 </Page>
