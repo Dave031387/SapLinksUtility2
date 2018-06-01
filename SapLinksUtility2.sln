@@ -5,11 +5,13 @@ VisualStudioVersion = 15.0.27428.2043
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SapLinksUtility2", "SapLinksUtility2\SapLinksUtility2.csproj", "{C833E54D-0987-429A-B67C-7642DE6FF7DC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileIO", "..\..\..\Documents\Visual Studio 2017\Projects\SapLinksUtility\FileIO\FileIO.csproj", "{CF71AAA2-FF40-4237-B75B-E6ACF6724B9B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileIO", "FileIO\FileIO.csproj", "{CF71AAA2-FF40-4237-B75B-E6ACF6724B9B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataTable", "..\..\..\Documents\Visual Studio 2017\Projects\SapLinksUtility\DataPod\DataTable.csproj", "{0F00CF78-FB69-455B-8AE4-3B7C52DBD1BE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataTable", "DataPod\DataTable.csproj", "{0F00CF78-FB69-455B-8AE4-3B7C52DBD1BE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Settings", "..\..\..\Documents\Visual Studio 2017\Projects\SapLinksUtility\Settings\Settings.csproj", "{F1E8D161-8209-4171-9612-4AB838A99D37}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Repository", "Repository\Repository.csproj", "{068DC454-3558-4B56-859F-A4520367D4CF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Settings", "Settings\Settings.csproj", "{F1E8D161-8209-4171-9612-4AB838A99D37}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,6 +31,10 @@ Global
 		{0F00CF78-FB69-455B-8AE4-3B7C52DBD1BE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0F00CF78-FB69-455B-8AE4-3B7C52DBD1BE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0F00CF78-FB69-455B-8AE4-3B7C52DBD1BE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{068DC454-3558-4B56-859F-A4520367D4CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{068DC454-3558-4B56-859F-A4520367D4CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{068DC454-3558-4B56-859F-A4520367D4CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{068DC454-3558-4B56-859F-A4520367D4CF}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F1E8D161-8209-4171-9612-4AB838A99D37}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{F1E8D161-8209-4171-9612-4AB838A99D37}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F1E8D161-8209-4171-9612-4AB838A99D37}.Release|Any CPU.ActiveCfg = Release|Any CPU
