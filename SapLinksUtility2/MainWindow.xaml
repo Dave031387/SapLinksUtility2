@@ -26,7 +26,7 @@
                       CanContentScroll="True" Visibility="Collapsed">
             <StackPanel x:Name="ToolsPanel" HorizontalAlignment="Left" Height="Auto" VerticalAlignment="Top" Width="Auto"
                     Orientation="Horizontal" CanHorizontallyScroll="True" ScrollViewer.CanContentScroll="True" Panel.ZIndex="99">
-                <Button x:Name="RepositoryButton" Style="{DynamicResource CategoryButtonStyle}">
+                <Button x:Name="RepositoryButton" Style="{DynamicResource CategoryButtonStyle}" Click="RepositoryButton_Click">
                     <TextBlock Style="{DynamicResource CategoryTextBlockStyle}">Maintain<LineBreak/>Repository</TextBlock>
                 </Button>
                 <Button x:Name="SAPInfoButton" Style="{DynamicResource CategoryButtonStyle}">
@@ -38,14 +38,22 @@
                 <Button x:Name="UtilityButton" Style="{DynamicResource CategoryButtonStyle}">
                     <TextBlock Style="{DynamicResource CategoryTextBlockStyle}">Utility<LineBreak/>Tools</TextBlock>
                 </Button>
-                <Button x:Name="SettingsButton" Style="{DynamicResource CategoryButtonStyle}">
+                <Button x:Name="SettingsButton" Style="{DynamicResource CategoryButtonStyle}" Click="SettingsButton_Click">
                     <TextBlock Style="{DynamicResource CategoryTextBlockStyle}">Settings</TextBlock>
                 </Button>
-                <Button x:Name="AboutButton" Style="{DynamicResource CategoryButtonStyle}">
+                <Button x:Name="AboutButton" Style="{DynamicResource CategoryButtonStyle}" Click="AboutButton_Click">
                     <TextBlock Style="{DynamicResource CategoryTextBlockStyle}">About</TextBlock>
                 </Button>
             </StackPanel>
         </ScrollViewer>
+        <StackPanel x:Name="GradientPanel" Grid.Row="0" Grid.Column="1" Grid.RowSpan="2" Visibility="Hidden" Panel.ZIndex="50">
+            <StackPanel.Background>
+                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                    <GradientStop Color="{StaticResource PrimaryGreenColor}" Offset="0"/>
+                    <GradientStop Color="#7FFFFFFF" Offset="1"/>
+                </LinearGradientBrush>
+            </StackPanel.Background>
+        </StackPanel>
         <ScrollViewer Grid.Row="0" Grid.Column="1" Grid.RowSpan="2" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" CanContentScroll="True">
             <Frame x:Name="MainWindowFrame" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto"
                    ScrollViewer.CanContentScroll="True" NavigationUIVisibility="Hidden"/>

@@ -30,14 +30,44 @@ namespace SapLinksUtility2
         {
             if (ToolsPanelScrollViewer.Visibility == Visibility.Collapsed)
             {
-                MainWindowFrame.Visibility = Visibility.Hidden;
+                GradientPanel.Visibility = Visibility.Visible;
                 ToolsPanelScrollViewer.Visibility = Visibility.Visible;
             }
             else
             {
                 ToolsPanelScrollViewer.Visibility = Visibility.Collapsed;
-                MainWindowFrame.Visibility = Visibility.Visible;
+                GradientPanel.Visibility = Visibility.Hidden;
             }
+        }
+
+        private void SettingsButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (!(MainWindowFrame.Content is SettingsToolPage))
+            {
+                MainWindowFrame.Content = new SettingsToolPage();
+            }
+            ToolsPanelScrollViewer.Visibility = Visibility.Collapsed;
+            GradientPanel.Visibility = Visibility.Hidden;
+        }
+
+        private void AboutButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (!(MainWindowFrame.Content is WelcomePage))
+            {
+                MainWindowFrame.Content = new WelcomePage();
+            }
+            ToolsPanelScrollViewer.Visibility = Visibility.Collapsed;
+            GradientPanel.Visibility = Visibility.Hidden;
+        }
+
+        private void RepositoryButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (!(MainWindowFrame.Content is RepositoryToolPage))
+            {
+                MainWindowFrame.Content = new RepositoryToolPage();
+            }
+            ToolsPanelScrollViewer.Visibility = Visibility.Collapsed;
+            GradientPanel.Visibility = Visibility.Hidden;
         }
     }
 }

@@ -85,8 +85,8 @@
             </Trigger>
         </ControlTemplate.Triggers>
     </ControlTemplate>
-    <!-- Control template for a blue button -->
-    <ControlTemplate x:Key="BlueButtonTemplate" TargetType="{x:Type Button}">
+    <!-- Control template for tool category buttons -->
+    <ControlTemplate x:Key="ToolsCategoryButtonTemplate" TargetType="{x:Type Button}">
         <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}"
                             Background="{TemplateBinding Background}" SnapsToDevicePixels="true">
             <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
@@ -96,6 +96,37 @@
                 <ContentPresenter.Effect>
                     <DropShadowEffect/>
                 </ContentPresenter.Effect>
+            </ContentPresenter>
+        </Border>
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsDefaulted" Value="true">
+                <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+            </Trigger>
+            <Trigger Property="IsMouseOver" Value="true">
+                <Setter Property="Background" TargetName="border" Value="{StaticResource BlueButton.MouseOver.Background}"/>
+                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource BlueButton.MouseOver.Border}"/>
+                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource BlueButton.MouseOver.Foreground}"/>
+            </Trigger>
+            <Trigger Property="IsPressed" Value="true">
+                <Setter Property="Background" TargetName="border" Value="{StaticResource BlueButton.Pressed.Background}"/>
+                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource BlueButton.Pressed.Border}"/>
+                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource BlueButton.Pressed.Foreground}"/>
+            </Trigger>
+            <Trigger Property="IsEnabled" Value="false">
+                <Setter Property="Background" TargetName="border" Value="{StaticResource BlueButton.Disabled.Background}"/>
+                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource BlueButton.Disabled.Border}"/>
+                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource BlueButton.Disabled.Foreground}"/>
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
+    <!-- Control template for tool buttons -->
+    <ControlTemplate x:Key="ToolButtonTemplate" TargetType="{x:Type Button}">
+        <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}"
+                            Background="{TemplateBinding Background}" SnapsToDevicePixels="true">
+            <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                          Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                          VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                          TextElement.Foreground="{StaticResource BlueButton.Static.Foreground}" TextElement.FontSize="18">
             </ContentPresenter>
         </Border>
         <ControlTemplate.Triggers>
@@ -147,7 +178,22 @@
         <Setter Property="Padding" Value="1"/>
         <Setter Property="Height" Value="105"/>
         <Setter Property="Width" Value="110"/>
-        <Setter Property="Template" Value="{StaticResource BlueButtonTemplate}"/>
+        <Setter Property="Template" Value="{StaticResource ToolsCategoryButtonTemplate}"/>
+    </Style>
+    <!-- Style definition for the tool buttons -->
+    <Style x:Key="ToolsButtonStyle" TargetType="{x:Type Button}">
+        <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+        <Setter Property="Background" Value="{StaticResource BlueButton.Static.Background}"/>
+        <Setter Property="BorderBrush" Value="{StaticResource BlueButton.Static.Border}"/>
+        <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+        <Setter Property="BorderThickness" Value="2"/>
+        <Setter Property="Margin" Value="5,0,35,10"/>
+        <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Top"/>
+        <Setter Property="Height" Value="Auto"/>
+        <Setter Property="Width" Value="Auto"/>
+        <Setter Property="Template" Value="{StaticResource ToolButtonTemplate}"/>
     </Style>
     <!-- Control template for the main window -->
     <ControlTemplate x:Key="WindowTemplateKey" TargetType="{x:Type Window}">
@@ -192,6 +238,34 @@
     </Style>
     <!-- Style definition for the text on the tools category buttons -->
     <Style x:Key="CategoryTextBlockStyle" TargetType="{x:Type TextBlock}">
+        <Setter Property="TextWrapping" Value="Wrap"/>
+        <Setter Property="TextTrimming" Value="None"/>
+        <Setter Property="FontSize" Value="18"/>
+        <Setter Property="TextAlignment" Value="Center"/>
+        <Setter Property="Foreground" Value="White"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+    </Style>
+    <!-- Style definition for the title text on the tool pages -->
+    <Style x:Key="ToolTitleTextBlockStyle" TargetType="{x:Type TextBlock}">
+        <Setter Property="FontFamily" Value="Segoe UI Black"/>
+        <Setter Property="Padding" Value="15,20"/>
+        <Setter Property="Margin" Value="5,0,35,0"/>
+        <Setter Property="TextWrapping" Value="Wrap"/>
+        <Setter Property="TextTrimming" Value="None"/>
+        <Setter Property="FontSize" Value="36"/>
+        <Setter Property="TextAlignment" Value="Center"/>
+        <Setter Property="Foreground" Value="{DynamicResource ToolsPageTitle}"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="HorizontalAlignment" Value="Center"/>
+        <Setter Property="Effect">
+            <Setter.Value>
+                <DropShadowEffect Color="Black"/>
+            </Setter.Value>
+        </Setter>
+    </Style>
+    <!-- Style definition for the text on the tool buttons -->
+    <Style x:Key="ToolButtonTextBlockStyle" TargetType="{x:Type TextBlock}">
         <Setter Property="TextWrapping" Value="Wrap"/>
         <Setter Property="TextTrimming" Value="None"/>
         <Setter Property="FontSize" Value="18"/>

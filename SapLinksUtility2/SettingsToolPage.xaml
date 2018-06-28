@@ -1,4 +1,4 @@
-﻿<Page x:Name="SettingsToolPage1" x:Class="SapLinksUtility2.SettingsToolPage"
+﻿<Page x:Class="SapLinksUtility2.SettingsToolPage"
       xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
       xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
       xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
@@ -7,10 +7,18 @@
       mc:Ignorable="d" 
       d:DesignHeight="300" d:DesignWidth="300"
       Title="SettingsToolPage">
-
     <Grid>
         <StackPanel>
-            <TextBlock FontFamily="Segoe UI Black" FontSize="36" TextAlignment="Center" Padding="15,20">Settings Tool</TextBlock>
+            <TextBlock Style="{DynamicResource ToolTitleTextBlockStyle}">Settings Tool</TextBlock>
+            <Button Style="{DynamicResource ToolsButtonStyle}">
+                <TextBlock Style="{DynamicResource ToolButtonTextBlockStyle}">Maintain Settings</TextBlock>
+            </Button>
+            <Button Style="{DynamicResource ToolsButtonStyle}">
+                <TextBlock Style="{DynamicResource ToolButtonTextBlockStyle}">Export Settings</TextBlock>
+            </Button>
+            <Button Style="{DynamicResource ToolsButtonStyle}">
+                <TextBlock Style="{DynamicResource ToolButtonTextBlockStyle}">Import Settings</TextBlock>
+            </Button>
         </StackPanel>
     </Grid>
 </Page>
