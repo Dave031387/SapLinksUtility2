@@ -24,37 +24,41 @@
     <Color x:Key="AlertTertiaryOrangeColor">#FFFFE6AE</Color>
     <Color x:Key="AlertTertiaryYellowColor">#FFEB871B</Color>
     <!-- Define solid color brushes for a green button -->
-    <SolidColorBrush x:Key="GreenButton.Static.Background" Color="{StaticResource PrimaryGreenColor}"/>
-    <SolidColorBrush x:Key="GreenButton.Static.Border" Color="{StaticResource PrimaryGreenColor}"/>
-    <SolidColorBrush x:Key="GreenButton.Static.Foreground" Color="White"/>
-    <SolidColorBrush x:Key="GreenButton.MouseOver.Background" Color="{StaticResource TertiaryGreenColor}"/>
-    <SolidColorBrush x:Key="GreenButton.MouseOver.Border" Color="{StaticResource PrimaryGreenColor}"/>
-    <SolidColorBrush x:Key="GreenButton.MouseOver.Foreground" Color="White"/>
-    <SolidColorBrush x:Key="GreenButton.Pressed.Background" Color="{StaticResource SecondaryGreenColor}"/>
-    <SolidColorBrush x:Key="GreenButton.Pressed.Border" Color="{StaticResource PrimaryGreenColor}"/>
-    <SolidColorBrush x:Key="GreenButton.Pressed.Foreground" Color="White"/>
-    <SolidColorBrush x:Key="GreenButton.Disabled.Background" Color="{StaticResource QuaternaryGreenColor}"/>
-    <SolidColorBrush x:Key="GreenButton.Disabled.Border" Color="{StaticResource QuaternaryGreenColor}"/>
-    <SolidColorBrush x:Key="GreenButton.Disabled.Foreground" Color="White"/>
+    <SolidColorBrush x:Key="GreenButton.Static.BackgroundBrush" Color="{StaticResource PrimaryGreenColor}"/>
+    <SolidColorBrush x:Key="GreenButton.Static.BorderBrush" Color="{StaticResource PrimaryGreenColor}"/>
+    <SolidColorBrush x:Key="GreenButton.Static.ForegroundBrush" Color="White"/>
+    <SolidColorBrush x:Key="GreenButton.MouseOver.BackgroundBrush" Color="{StaticResource TertiaryGreenColor}"/>
+    <SolidColorBrush x:Key="GreenButton.MouseOver.BorderBrush" Color="{StaticResource PrimaryGreenColor}"/>
+    <SolidColorBrush x:Key="GreenButton.MouseOver.ForegroundBrush" Color="White"/>
+    <SolidColorBrush x:Key="GreenButton.Pressed.BackgroundBrush" Color="{StaticResource SecondaryGreenColor}"/>
+    <SolidColorBrush x:Key="GreenButton.Pressed.BorderBrush" Color="{StaticResource PrimaryGreenColor}"/>
+    <SolidColorBrush x:Key="GreenButton.Pressed.ForegroundBrush" Color="White"/>
+    <SolidColorBrush x:Key="GreenButton.Disabled.BackgroundBrush" Color="{StaticResource QuaternaryGreenColor}"/>
+    <SolidColorBrush x:Key="GreenButton.Disabled.BorderBrush" Color="{StaticResource QuaternaryGreenColor}"/>
+    <SolidColorBrush x:Key="GreenButton.Disabled.ForegroundBrush" Color="White"/>
     <!-- Define solid color brushes for a blue button -->
-    <SolidColorBrush x:Key="BlueButton.Static.Background" Color="{StaticResource PrimaryBlueColor}"/>
-    <SolidColorBrush x:Key="BlueButton.Static.Border" Color="{StaticResource PrimaryGreenColor}"/>
-    <SolidColorBrush x:Key="BlueButton.Static.Foreground" Color="White"/>
-    <SolidColorBrush x:Key="BlueButton.MouseOver.Background" Color="{StaticResource TertiaryBlueColor}"/>
-    <SolidColorBrush x:Key="BlueButton.MouseOver.Border" Color="{StaticResource PrimaryGreenColor}"/>
-    <SolidColorBrush x:Key="BlueButton.MouseOver.Foreground" Color="White"/>
-    <SolidColorBrush x:Key="BlueButton.Pressed.Background" Color="{StaticResource SecondaryBlueColor}"/>
-    <SolidColorBrush x:Key="BlueButton.Pressed.Border" Color="{StaticResource PrimaryGreenColor}"/>
-    <SolidColorBrush x:Key="BlueButton.Pressed.Foreground" Color="White"/>
-    <SolidColorBrush x:Key="BlueButton.Disabled.Background" Color="{StaticResource QuaternaryBlueColor}"/>
-    <SolidColorBrush x:Key="BlueButton.Disabled.Border" Color="{StaticResource QuaternaryGreenColor}"/>
-    <SolidColorBrush x:Key="BlueButton.Disabled.Foreground" Color="White"/>
+    <SolidColorBrush x:Key="BlueButton.Static.BackgroundBrush" Color="{StaticResource PrimaryBlueColor}"/>
+    <SolidColorBrush x:Key="BlueButton.Static.BorderBrush" Color="{StaticResource PrimaryGreenColor}"/>
+    <SolidColorBrush x:Key="BlueButton.Static.ForegroundBrush" Color="White"/>
+    <SolidColorBrush x:Key="BlueButton.MouseOver.BackgroundBrush" Color="{StaticResource TertiaryBlueColor}"/>
+    <SolidColorBrush x:Key="BlueButton.MouseOver.BorderBrush" Color="{StaticResource PrimaryGreenColor}"/>
+    <SolidColorBrush x:Key="BlueButton.MouseOver.ForegroundBrush" Color="White"/>
+    <SolidColorBrush x:Key="BlueButton.Pressed.BackgroundBrush" Color="{StaticResource SecondaryBlueColor}"/>
+    <SolidColorBrush x:Key="BlueButton.Pressed.BorderBrush" Color="{StaticResource PrimaryGreenColor}"/>
+    <SolidColorBrush x:Key="BlueButton.Pressed.ForegroundBrush" Color="White"/>
+    <SolidColorBrush x:Key="BlueButton.Disabled.BackgroundBrush" Color="{StaticResource QuaternaryBlueColor}"/>
+    <SolidColorBrush x:Key="BlueButton.Disabled.BorderBrush" Color="{StaticResource QuaternaryGreenColor}"/>
+    <SolidColorBrush x:Key="BlueButton.Disabled.ForegroundBrush" Color="White"/>
     <!-- Other brushes -->
-    <SolidColorBrush x:Key="Window.Background" Color="{StaticResource QuinaryBlueColor}"/>
+    <SolidColorBrush x:Key="Window.BackgroundBrush" Color="{StaticResource QuinaryBlueColor}"/>
     <SolidColorBrush x:Key="BlackBrush" Color="Black"/>
-    <SolidColorBrush x:Key="ToolsPageTitle" Color="{StaticResource PrimaryBlueColor}"/>
+    <SolidColorBrush x:Key="ToolsPageTitleBrush" Color="{StaticResource PrimaryBlueColor}"/>
     <SolidColorBrush x:Key="LightGreenBrush" Color="{StaticResource TertiaryGreenColor}"/>
     <SolidColorBrush x:Key="MediumGreenBrush" Color="{StaticResource PrimaryGreenColor}"/>
+    <LinearGradientBrush x:Key="PanelGradientBrush" EndPoint="0.5,1" StartPoint="0.5,0">
+        <GradientStop Color="{StaticResource PrimaryGreenColor}" Offset="0"/>
+        <GradientStop Color="#7FFFFFFF" Offset="1"/>
+    </LinearGradientBrush>
     <!-- Control template for a green button -->
     <ControlTemplate x:Key="GreenButtonTemplate" TargetType="{x:Type Button}">
         <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}"
@@ -62,26 +66,26 @@
             <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
                                           Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
                                           VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
-                                          TextElement.Foreground="{StaticResource GreenButton.Static.Foreground}" TextElement.FontSize="18"/>
+                                          TextElement.Foreground="{StaticResource GreenButton.Static.ForegroundBrush}" TextElement.FontSize="18"/>
         </Border>
         <ControlTemplate.Triggers>
             <Trigger Property="IsDefaulted" Value="true">
                 <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
             </Trigger>
             <Trigger Property="IsMouseOver" Value="true">
-                <Setter Property="Background" TargetName="border" Value="{StaticResource GreenButton.MouseOver.Background}"/>
-                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource GreenButton.MouseOver.Border}"/>
-                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource GreenButton.MouseOver.Foreground}"/>
+                <Setter Property="Background" TargetName="border" Value="{StaticResource GreenButton.MouseOver.BackgroundBrush}"/>
+                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource GreenButton.MouseOver.BorderBrush}"/>
+                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource GreenButton.MouseOver.ForegroundBrush}"/>
             </Trigger>
             <Trigger Property="IsPressed" Value="true">
-                <Setter Property="Background" TargetName="border" Value="{StaticResource GreenButton.Pressed.Background}"/>
-                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource GreenButton.Pressed.Border}"/>
-                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource GreenButton.Pressed.Foreground}"/>
+                <Setter Property="Background" TargetName="border" Value="{StaticResource GreenButton.Pressed.BackgroundBrush}"/>
+                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource GreenButton.Pressed.BorderBrush}"/>
+                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource GreenButton.Pressed.ForegroundBrush}"/>
             </Trigger>
             <Trigger Property="IsEnabled" Value="false">
-                <Setter Property="Background" TargetName="border" Value="{StaticResource GreenButton.Disabled.Background}"/>
-                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource GreenButton.Disabled.Border}"/>
-                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource GreenButton.Disabled.Foreground}"/>
+                <Setter Property="Background" TargetName="border" Value="{StaticResource GreenButton.Disabled.BackgroundBrush}"/>
+                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource GreenButton.Disabled.BorderBrush}"/>
+                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource GreenButton.Disabled.ForegroundBrush}"/>
             </Trigger>
         </ControlTemplate.Triggers>
     </ControlTemplate>
@@ -92,7 +96,7 @@
             <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
                                           Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
                                           VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
-                                          TextElement.Foreground="{StaticResource BlueButton.Static.Foreground}" TextElement.FontSize="18">
+                                          TextElement.Foreground="{StaticResource BlueButton.Static.ForegroundBrush}" TextElement.FontSize="18">
                 <ContentPresenter.Effect>
                     <DropShadowEffect/>
                 </ContentPresenter.Effect>
@@ -103,19 +107,19 @@
                 <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
             </Trigger>
             <Trigger Property="IsMouseOver" Value="true">
-                <Setter Property="Background" TargetName="border" Value="{StaticResource BlueButton.MouseOver.Background}"/>
-                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource BlueButton.MouseOver.Border}"/>
-                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource BlueButton.MouseOver.Foreground}"/>
+                <Setter Property="Background" TargetName="border" Value="{StaticResource BlueButton.MouseOver.BackgroundBrush}"/>
+                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource BlueButton.MouseOver.BorderBrush}"/>
+                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource BlueButton.MouseOver.ForegroundBrush}"/>
             </Trigger>
             <Trigger Property="IsPressed" Value="true">
-                <Setter Property="Background" TargetName="border" Value="{StaticResource BlueButton.Pressed.Background}"/>
-                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource BlueButton.Pressed.Border}"/>
-                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource BlueButton.Pressed.Foreground}"/>
+                <Setter Property="Background" TargetName="border" Value="{StaticResource BlueButton.Pressed.BackgroundBrush}"/>
+                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource BlueButton.Pressed.BorderBrush}"/>
+                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource BlueButton.Pressed.ForegroundBrush}"/>
             </Trigger>
             <Trigger Property="IsEnabled" Value="false">
-                <Setter Property="Background" TargetName="border" Value="{StaticResource BlueButton.Disabled.Background}"/>
-                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource BlueButton.Disabled.Border}"/>
-                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource BlueButton.Disabled.Foreground}"/>
+                <Setter Property="Background" TargetName="border" Value="{StaticResource BlueButton.Disabled.BackgroundBrush}"/>
+                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource BlueButton.Disabled.BorderBrush}"/>
+                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource BlueButton.Disabled.ForegroundBrush}"/>
             </Trigger>
         </ControlTemplate.Triggers>
     </ControlTemplate>
@@ -126,7 +130,7 @@
             <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
                                           Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
                                           VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
-                                          TextElement.Foreground="{StaticResource BlueButton.Static.Foreground}" TextElement.FontSize="18">
+                                          TextElement.Foreground="{StaticResource BlueButton.Static.ForegroundBrush}" TextElement.FontSize="18">
             </ContentPresenter>
         </Border>
         <ControlTemplate.Triggers>
@@ -134,27 +138,27 @@
                 <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
             </Trigger>
             <Trigger Property="IsMouseOver" Value="true">
-                <Setter Property="Background" TargetName="border" Value="{StaticResource BlueButton.MouseOver.Background}"/>
-                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource BlueButton.MouseOver.Border}"/>
-                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource BlueButton.MouseOver.Foreground}"/>
+                <Setter Property="Background" TargetName="border" Value="{StaticResource BlueButton.MouseOver.BackgroundBrush}"/>
+                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource BlueButton.MouseOver.BorderBrush}"/>
+                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource BlueButton.MouseOver.ForegroundBrush}"/>
             </Trigger>
             <Trigger Property="IsPressed" Value="true">
-                <Setter Property="Background" TargetName="border" Value="{StaticResource BlueButton.Pressed.Background}"/>
-                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource BlueButton.Pressed.Border}"/>
-                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource BlueButton.Pressed.Foreground}"/>
+                <Setter Property="Background" TargetName="border" Value="{StaticResource BlueButton.Pressed.BackgroundBrush}"/>
+                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource BlueButton.Pressed.BorderBrush}"/>
+                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource BlueButton.Pressed.ForegroundBrush}"/>
             </Trigger>
             <Trigger Property="IsEnabled" Value="false">
-                <Setter Property="Background" TargetName="border" Value="{StaticResource BlueButton.Disabled.Background}"/>
-                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource BlueButton.Disabled.Border}"/>
-                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource BlueButton.Disabled.Foreground}"/>
+                <Setter Property="Background" TargetName="border" Value="{StaticResource BlueButton.Disabled.BackgroundBrush}"/>
+                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource BlueButton.Disabled.BorderBrush}"/>
+                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource BlueButton.Disabled.ForegroundBrush}"/>
             </Trigger>
         </ControlTemplate.Triggers>
     </ControlTemplate>
     <!-- Style definition for the "Tools" button -->
     <Style x:Key="ToolButtonStyle" TargetType="{x:Type Button}">
         <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
-        <Setter Property="Background" Value="{StaticResource GreenButton.Static.Background}"/>
-        <Setter Property="BorderBrush" Value="{StaticResource GreenButton.Static.Border}"/>
+        <Setter Property="Background" Value="{StaticResource GreenButton.Static.BackgroundBrush}"/>
+        <Setter Property="BorderBrush" Value="{StaticResource GreenButton.Static.BorderBrush}"/>
         <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
         <Setter Property="BorderThickness" Value="2"/>
         <Setter Property="VerticalAlignment" Value="Top"/>
@@ -168,8 +172,8 @@
     <!-- Style definition for the tools category buttons -->
     <Style x:Key="CategoryButtonStyle" TargetType="{x:Type Button}">
         <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
-        <Setter Property="Background" Value="{StaticResource BlueButton.Static.Background}"/>
-        <Setter Property="BorderBrush" Value="{StaticResource BlueButton.Static.Border}"/>
+        <Setter Property="Background" Value="{StaticResource BlueButton.Static.BackgroundBrush}"/>
+        <Setter Property="BorderBrush" Value="{StaticResource BlueButton.Static.BorderBrush}"/>
         <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
         <Setter Property="BorderThickness" Value="2"/>
         <Setter Property="HorizontalContentAlignment" Value="Center"/>
@@ -183,8 +187,8 @@
     <!-- Style definition for the tool buttons -->
     <Style x:Key="ToolsButtonStyle" TargetType="{x:Type Button}">
         <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
-        <Setter Property="Background" Value="{StaticResource BlueButton.Static.Background}"/>
-        <Setter Property="BorderBrush" Value="{StaticResource BlueButton.Static.Border}"/>
+        <Setter Property="Background" Value="{StaticResource BlueButton.Static.BackgroundBrush}"/>
+        <Setter Property="BorderBrush" Value="{StaticResource BlueButton.Static.BorderBrush}"/>
         <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
         <Setter Property="BorderThickness" Value="2"/>
         <Setter Property="Margin" Value="5,0,35,10"/>
@@ -196,7 +200,7 @@
         <Setter Property="Template" Value="{StaticResource ToolButtonTemplate}"/>
     </Style>
     <!-- Control template for the main window -->
-    <ControlTemplate x:Key="WindowTemplateKey" TargetType="{x:Type Window}">
+    <ControlTemplate x:Key="WindowTemplate" TargetType="{x:Type Window}">
         <Border BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}" Background="{TemplateBinding Background}">
             <Grid>
                 <AdornerDecorator>
@@ -216,9 +220,9 @@
         </ControlTemplate.Triggers>
     </ControlTemplate>
     <!-- Style definition for the main window -->
-    <Style x:Key="WindowStyle1" TargetType="{x:Type Window}">
+    <Style x:Key="MainWindowStyle" TargetType="{x:Type Window}">
         <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.WindowTextBrushKey}}"/>
-        <Setter Property="Background" Value="{StaticResource Window.Background}"/>
+        <Setter Property="Background" Value="{StaticResource Window.BackgroundBrush}"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type Window}">
@@ -232,7 +236,7 @@
         </Setter>
         <Style.Triggers>
             <Trigger Property="ResizeMode" Value="CanResizeWithGrip">
-                <Setter Property="Template" Value="{StaticResource WindowTemplateKey}"/>
+                <Setter Property="Template" Value="{StaticResource WindowTemplate}"/>
             </Trigger>
         </Style.Triggers>
     </Style>
@@ -255,7 +259,7 @@
         <Setter Property="TextTrimming" Value="None"/>
         <Setter Property="FontSize" Value="36"/>
         <Setter Property="TextAlignment" Value="Center"/>
-        <Setter Property="Foreground" Value="{DynamicResource ToolsPageTitle}"/>
+        <Setter Property="Foreground" Value="{DynamicResource ToolsPageTitleBrush}"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
         <Setter Property="HorizontalAlignment" Value="Center"/>
         <Setter Property="Effect">

@@ -32,7 +32,7 @@ namespace Data
         #endregion Private Fields
 
         #region Public Constructors
-        
+
         /// <summary>
         /// Default constructor that creates a DataRow with an unspecified number of fields
         /// </summary>

@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="SAP Links Utility" Height="440" Width="800" Style="{DynamicResource WindowStyle1}" MinWidth="800" MinHeight="440">
+        Title="SAP Links Utility" Height="440" Width="800" Style="{DynamicResource MainWindowStyle}" MinWidth="800" MinHeight="440">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -46,14 +46,8 @@
                 </Button>
             </StackPanel>
         </ScrollViewer>
-        <StackPanel x:Name="GradientPanel" Grid.Row="0" Grid.Column="1" Grid.RowSpan="2" Visibility="Hidden" Panel.ZIndex="50">
-            <StackPanel.Background>
-                <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                    <GradientStop Color="{StaticResource PrimaryGreenColor}" Offset="0"/>
-                    <GradientStop Color="#7FFFFFFF" Offset="1"/>
-                </LinearGradientBrush>
-            </StackPanel.Background>
-        </StackPanel>
+        <StackPanel x:Name="GradientPanel" Grid.Row="0" Grid.Column="1" Grid.RowSpan="2" Visibility="Hidden" Panel.ZIndex="50"
+                    Background="{StaticResource PanelGradientBrush}"/>
         <ScrollViewer Grid.Row="0" Grid.Column="1" Grid.RowSpan="2" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" CanContentScroll="True">
             <Frame x:Name="MainWindowFrame" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto"
                    ScrollViewer.CanContentScroll="True" NavigationUIVisibility="Hidden"/>
