@@ -19,7 +19,7 @@
     <AssemblyInfoVersionSettings>YearStamp.MonthStamp.DayStamp.TimeStamp</AssemblyInfoVersionSettings>
     <PrimaryVersionType>AssemblyVersionAttribute</PrimaryVersionType>
     <AssemblyVersionSettings>YearStamp.MonthStamp.DayStamp.TimeStamp</AssemblyVersionSettings>
-    <AssemblyVersion>2018.6.30.1630</AssemblyVersion>
+    <AssemblyVersion>2018.7.18.0105</AssemblyVersion>
     <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -52,6 +52,17 @@
   <ItemGroup>
     <Compile Include="DataElement.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RepositoryManager.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataPod\DataTable.csproj">
+      <Project>{0F00CF78-FB69-455B-8AE4-3B7C52DBD1BE}</Project>
+      <Name>DataTable</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\FileIO\FileIO.csproj">
+      <Project>{CF71AAA2-FF40-4237-B75B-E6ACF6724B9B}</Project>
+      <Name>FileIO</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
