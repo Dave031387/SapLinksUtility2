@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SapLinksUtility2.Windows;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,12 @@ namespace SapLinksUtility2
         public RepositoryToolPage()
         {
             InitializeComponent();
+        }
+
+        private void DataElementButton_Click(object sender, RoutedEventArgs e)
+        {
+            MaintenanceWindow maintenanceWindow = new MaintenanceWindow();
+            maintenanceWindow.ShowDialog();
         }
     }
 }

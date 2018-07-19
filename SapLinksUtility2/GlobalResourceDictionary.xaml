@@ -154,6 +154,37 @@
             </Trigger>
         </ControlTemplate.Triggers>
     </ControlTemplate>
+    <!-- Control template for action buttons -->
+    <ControlTemplate x:Key="ActionButtonTemplate" TargetType="{x:Type Button}">
+        <Border x:Name="border" BorderBrush="{TemplateBinding BorderBrush}" BorderThickness="{TemplateBinding BorderThickness}"
+                            Background="{TemplateBinding Background}" SnapsToDevicePixels="true">
+            <ContentPresenter x:Name="contentPresenter" Focusable="False" HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                          Margin="{TemplateBinding Padding}" RecognizesAccessKey="True" SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                          VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                          TextElement.Foreground="{StaticResource BlueButton.Static.ForegroundBrush}" TextElement.FontSize="18">
+            </ContentPresenter>
+        </Border>
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsDefaulted" Value="true">
+                <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+            </Trigger>
+            <Trigger Property="IsMouseOver" Value="true">
+                <Setter Property="Background" TargetName="border" Value="{StaticResource GreenButton.MouseOver.BackgroundBrush}"/>
+                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource GreenButton.MouseOver.BorderBrush}"/>
+                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource GreenButton.MouseOver.ForegroundBrush}"/>
+            </Trigger>
+            <Trigger Property="IsPressed" Value="true">
+                <Setter Property="Background" TargetName="border" Value="{StaticResource GreenButton.Pressed.BackgroundBrush}"/>
+                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource GreenButton.Pressed.BorderBrush}"/>
+                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource GreenButton.Pressed.ForegroundBrush}"/>
+            </Trigger>
+            <Trigger Property="IsEnabled" Value="false">
+                <Setter Property="Background" TargetName="border" Value="{StaticResource GreenButton.Disabled.BackgroundBrush}"/>
+                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource GreenButton.Disabled.BorderBrush}"/>
+                <Setter Property="TextElement.Foreground" TargetName="contentPresenter" Value="{StaticResource GreenButton.Disabled.ForegroundBrush}"/>
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
     <!-- Style definition for the "Tools" button -->
     <Style x:Key="ToolButtonStyle" TargetType="{x:Type Button}">
         <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
@@ -198,6 +229,21 @@
         <Setter Property="Height" Value="Auto"/>
         <Setter Property="Width" Value="Auto"/>
         <Setter Property="Template" Value="{StaticResource ToolButtonTemplate}"/>
+    </Style>
+    <!-- Style definition for the action buttons -->
+    <Style x:Key="ActionButtonStyle" TargetType="{x:Type Button}">
+        <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
+        <Setter Property="Background" Value="{StaticResource GreenButton.Static.BackgroundBrush}"/>
+        <Setter Property="BorderBrush" Value="{StaticResource GreenButton.Static.BorderBrush}"/>
+        <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+        <Setter Property="BorderThickness" Value="2"/>
+        <Setter Property="Margin" Value="5,10"/>
+        <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
+        <Setter Property="VerticalContentAlignment" Value="Center"/>
+        <Setter Property="VerticalAlignment" Value="Top"/>
+        <Setter Property="Height" Value="Auto"/>
+        <Setter Property="Width" Value="Auto"/>
+        <Setter Property="Template" Value="{StaticResource ActionButtonTemplate}"/>
     </Style>
     <!-- Control template for the main window -->
     <ControlTemplate x:Key="WindowTemplate" TargetType="{x:Type Window}">
