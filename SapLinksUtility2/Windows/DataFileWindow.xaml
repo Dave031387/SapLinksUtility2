@@ -17,18 +17,45 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="Auto"/>
         </Grid.RowDefinitions>
-        <TextBlock x:Name="MaintScreenTitle" Grid.Row="0" Grid.Column="0" Style="{DynamicResource ToolTitleTextBlockStyle}" Grid.ColumnSpan="3">
+        <TextBlock x:Name="maintScreenTitle" Grid.Row="0" Grid.Column="0" Style="{DynamicResource ToolTitleTextBlockStyle}" Grid.ColumnSpan="3">
             Data File Maintenance
         </TextBlock>
         <ScrollViewer Grid.Column="0" Grid.Row="1" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto"
                       CanContentScroll="True" Padding="10">
-            <DataGrid x:Name="DataListGrid"/>
+            <DataGrid x:Name="dataListGrid"/>
         </ScrollViewer>
         <GridSplitter Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" Width="5"
                       Background="{StaticResource BlueButton.Static.BackgroundBrush}"/>
         <ScrollViewer Grid.Column="2" Grid.Row="1" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto"
                       CanContentScroll="True" Padding="10">
-            <DataGrid x:Name="DetailsGrid"/>
+            <Grid x:Name="detailsGrid">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="Auto"/>
+                    <ColumnDefinition/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <TextBlock Grid.Column="0" Grid.Row="0" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5"
+                           x:Name="fileNameTextBlock">
+                    File Name
+                </TextBlock>
+                <TextBox x:Name="fileNameTextBox" Grid.Column="1" Grid.Row="0" VerticalAlignment="Center" Margin="5"
+                         MinWidth="100"/>
+                <TextBlock Grid.Column="0" Grid.Row="1" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5">
+                    Physical File Name
+                </TextBlock>
+                <TextBox x:Name="physicalNameTextBox" Grid.Column="1" Grid.Row="1" VerticalAlignment="Center" Margin="5"
+                         MinWidth="100"/>
+                <TextBlock Grid.Column="0" Grid.Row="2" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="5">
+                    Description
+                </TextBlock>
+                <TextBox x:Name="descriptionTextBox" Grid.Column="1" Grid.Row="2" VerticalAlignment="Center" Margin="5"
+                         MinWidth="100" VerticalScrollBarVisibility="Auto" ScrollViewer.CanContentScroll="True"
+                         TextWrapping="Wrap" AcceptsReturn="True"/>
+            </Grid>
         </ScrollViewer>
         <Grid Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="3">
             <Grid.ColumnDefinitions>
@@ -41,19 +68,19 @@
             <Grid.RowDefinitions>
                 <RowDefinition/>
             </Grid.RowDefinitions>
-            <Button x:Name="BackButton" Style="{DynamicResource ActionButtonStyle}" Grid.Column="0">
+            <Button x:Name="backButton" Style="{DynamicResource ActionButtonStyle}" Grid.Column="0">
                 <TextBlock Style="{DynamicResource ToolButtonTextBlockStyle}">Back</TextBlock>
             </Button>
-            <Button x:Name="NewButton" Style="{DynamicResource ActionButtonStyle}" Grid.Column="1">
+            <Button x:Name="newButton" Style="{DynamicResource ActionButtonStyle}" Grid.Column="1">
                 <TextBlock Style="{DynamicResource ToolButtonTextBlockStyle}">New</TextBlock>
             </Button>
-            <Button x:Name="SaveButton" Style="{DynamicResource ActionButtonStyle}" Grid.Column="2">
+            <Button x:Name="saveButton" Style="{DynamicResource ActionButtonStyle}" Grid.Column="2">
                 <TextBlock Style="{DynamicResource ToolButtonTextBlockStyle}">Save</TextBlock>
             </Button>
-            <Button x:Name="CancelButton" Style="{DynamicResource ActionButtonStyle}" Grid.Column="3">
+            <Button x:Name="cancelButton" Style="{DynamicResource ActionButtonStyle}" Grid.Column="3">
                 <TextBlock Style="{DynamicResource ToolButtonTextBlockStyle}">Cancel</TextBlock>
             </Button>
-            <Button x:Name="DeleteButton" Style="{DynamicResource ActionButtonStyle}" Grid.Column="4">
+            <Button x:Name="deleteButton" Style="{DynamicResource ActionButtonStyle}" Grid.Column="4">
                 <TextBlock Style="{DynamicResource ToolButtonTextBlockStyle}">Delete</TextBlock>
             </Button>
         </Grid>

@@ -10,7 +10,7 @@
     <Grid>
         <StackPanel>
             <TextBlock Style="{DynamicResource ToolTitleTextBlockStyle}">Repository Maintenance</TextBlock>
-            <Button x:Name="DataElementButton" Style="{DynamicResource ToolsButtonStyle}" Click="DataElementButton_Click">
+            <Button x:Name="dataElementButton" Style="{DynamicResource ToolsButtonStyle}" Click="DataElementButton_Click">
                 <TextBlock Style="{DynamicResource ToolButtonTextBlockStyle}">Data Elements</TextBlock>
             </Button>
             <Button Style="{DynamicResource ToolsButtonStyle}">

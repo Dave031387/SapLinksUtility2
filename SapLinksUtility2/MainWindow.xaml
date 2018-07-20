@@ -14,7 +14,7 @@
             <ColumnDefinition Width="Auto"/>
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
-        <Button x:Name="ToolsButton" Grid.Column="0" Grid.Row="0" Content="Tools"
+        <Button x:Name="toolsButton" Grid.Column="0" Grid.Row="0" Content="Tools"
                 Style="{DynamicResource ToolButtonStyle}" Click="ToolsButton_Click">
             <Button.LayoutTransform>
                 <TransformGroup>
@@ -22,34 +22,34 @@
                 </TransformGroup>
             </Button.LayoutTransform>
         </Button>
-        <ScrollViewer x:Name="ToolsPanelScrollViewer" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled" Grid.Column="1" Grid.Row="0" Panel.ZIndex="99"
+        <ScrollViewer x:Name="toolsPanelScrollViewer" HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Disabled" Grid.Column="1" Grid.Row="0" Panel.ZIndex="99"
                       CanContentScroll="True" Visibility="Collapsed">
-            <StackPanel x:Name="ToolsPanel" HorizontalAlignment="Left" Height="Auto" VerticalAlignment="Top" Width="Auto"
+            <StackPanel x:Name="toolsPanel" HorizontalAlignment="Left" Height="Auto" VerticalAlignment="Top" Width="Auto"
                     Orientation="Horizontal" CanHorizontallyScroll="True" ScrollViewer.CanContentScroll="True" Panel.ZIndex="99">
-                <Button x:Name="RepositoryButton" Style="{DynamicResource CategoryButtonStyle}" Click="RepositoryButton_Click">
+                <Button x:Name="repositoryButton" Style="{DynamicResource CategoryButtonStyle}" Click="RepositoryButton_Click">
                     <TextBlock Style="{DynamicResource CategoryTextBlockStyle}">Maintain<LineBreak/>Repository</TextBlock>
                 </Button>
-                <Button x:Name="SAPInfoButton" Style="{DynamicResource CategoryButtonStyle}">
+                <Button x:Name="sapInfoButton" Style="{DynamicResource CategoryButtonStyle}">
                     <TextBlock Style="{DynamicResource CategoryTextBlockStyle}">Maintain<LineBreak/>SAP<LineBreak/>Information</TextBlock>
                 </Button>
-                <Button x:Name="BuilderButton" Style="{DynamicResource CategoryButtonStyle}">
+                <Button x:Name="builderButton" Style="{DynamicResource CategoryButtonStyle}">
                     <TextBlock Style="{DynamicResource CategoryTextBlockStyle}">Builder<LineBreak/>Tools</TextBlock>
                 </Button>
-                <Button x:Name="UtilityButton" Style="{DynamicResource CategoryButtonStyle}">
+                <Button x:Name="utilityButton" Style="{DynamicResource CategoryButtonStyle}">
                     <TextBlock Style="{DynamicResource CategoryTextBlockStyle}">Utility<LineBreak/>Tools</TextBlock>
                 </Button>
-                <Button x:Name="SettingsButton" Style="{DynamicResource CategoryButtonStyle}" Click="SettingsButton_Click">
+                <Button x:Name="settingsButton" Style="{DynamicResource CategoryButtonStyle}" Click="SettingsButton_Click">
                     <TextBlock Style="{DynamicResource CategoryTextBlockStyle}">Settings</TextBlock>
                 </Button>
-                <Button x:Name="AboutButton" Style="{DynamicResource CategoryButtonStyle}" Click="AboutButton_Click">
+                <Button x:Name="aboutButton" Style="{DynamicResource CategoryButtonStyle}" Click="AboutButton_Click">
                     <TextBlock Style="{DynamicResource CategoryTextBlockStyle}">About</TextBlock>
                 </Button>
             </StackPanel>
         </ScrollViewer>
-        <StackPanel x:Name="GradientPanel" Grid.Row="0" Grid.Column="1" Grid.RowSpan="2" Visibility="Hidden" Panel.ZIndex="50"
+        <StackPanel x:Name="gradientPanel" Grid.Row="0" Grid.Column="1" Grid.RowSpan="2" Visibility="Hidden" Panel.ZIndex="50"
                     Background="{StaticResource PanelGradientBrush}"/>
         <ScrollViewer Grid.Row="0" Grid.Column="1" Grid.RowSpan="2" VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" CanContentScroll="True">
-            <Frame x:Name="MainWindowFrame" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto"
+            <Frame x:Name="mainWindowFrame" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto"
                    ScrollViewer.CanContentScroll="True" NavigationUIVisibility="Hidden"/>
         </ScrollViewer>
     </Grid>

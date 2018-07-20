@@ -23,51 +23,51 @@ namespace SapLinksUtility2
         public MainWindow()
         {
             InitializeComponent();
-            MainWindowFrame.Content = new WelcomePage();
+            mainWindowFrame.Content = new WelcomePage();
         }
 
         private void ToolsButton_Click(object sender, RoutedEventArgs e)
         {
-            if (ToolsPanelScrollViewer.Visibility == Visibility.Collapsed)
+            if (toolsPanelScrollViewer.Visibility == Visibility.Collapsed)
             {
-                GradientPanel.Visibility = Visibility.Visible;
-                ToolsPanelScrollViewer.Visibility = Visibility.Visible;
+                gradientPanel.Visibility = Visibility.Visible;
+                toolsPanelScrollViewer.Visibility = Visibility.Visible;
             }
             else
             {
-                ToolsPanelScrollViewer.Visibility = Visibility.Collapsed;
-                GradientPanel.Visibility = Visibility.Hidden;
+                toolsPanelScrollViewer.Visibility = Visibility.Collapsed;
+                gradientPanel.Visibility = Visibility.Hidden;
             }
         }
 
         private void SettingsButton_Click(object sender, RoutedEventArgs e)
         {
-            if (!(MainWindowFrame.Content is SettingsToolPage))
+            if (!(mainWindowFrame.Content is SettingsToolPage))
             {
-                MainWindowFrame.Content = new SettingsToolPage();
+                mainWindowFrame.Content = new SettingsToolPage();
             }
-            ToolsPanelScrollViewer.Visibility = Visibility.Collapsed;
-            GradientPanel.Visibility = Visibility.Hidden;
+            toolsPanelScrollViewer.Visibility = Visibility.Collapsed;
+            gradientPanel.Visibility = Visibility.Hidden;
         }
 
         private void AboutButton_Click(object sender, RoutedEventArgs e)
         {
-            if (!(MainWindowFrame.Content is WelcomePage))
+            if (!(mainWindowFrame.Content is WelcomePage))
             {
-                MainWindowFrame.Content = new WelcomePage();
+                mainWindowFrame.Content = new WelcomePage();
             }
-            ToolsPanelScrollViewer.Visibility = Visibility.Collapsed;
-            GradientPanel.Visibility = Visibility.Hidden;
+            toolsPanelScrollViewer.Visibility = Visibility.Collapsed;
+            gradientPanel.Visibility = Visibility.Hidden;
         }
 
         private void RepositoryButton_Click(object sender, RoutedEventArgs e)
         {
-            if (!(MainWindowFrame.Content is RepositoryToolPage))
+            if (!(mainWindowFrame.Content is RepositoryToolPage))
             {
-                MainWindowFrame.Content = new RepositoryToolPage();
+                mainWindowFrame.Content = new RepositoryToolPage();
             }
-            ToolsPanelScrollViewer.Visibility = Visibility.Collapsed;
-            GradientPanel.Visibility = Visibility.Hidden;
+            toolsPanelScrollViewer.Visibility = Visibility.Collapsed;
+            gradientPanel.Visibility = Visibility.Hidden;
         }
     }
 }

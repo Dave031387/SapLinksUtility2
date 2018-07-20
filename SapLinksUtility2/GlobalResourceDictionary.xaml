@@ -26,6 +26,7 @@
     <!-- Define solid color brushes for a green button -->
     <SolidColorBrush x:Key="GreenButton.Static.BackgroundBrush" Color="{StaticResource PrimaryGreenColor}"/>
     <SolidColorBrush x:Key="GreenButton.Static.BorderBrush" Color="{StaticResource PrimaryGreenColor}"/>
+    <SolidColorBrush x:Key="GreenButton.Static.BlueBorderBrush" Color="{StaticResource PrimaryBlueColor}"/>
     <SolidColorBrush x:Key="GreenButton.Static.ForegroundBrush" Color="White"/>
     <SolidColorBrush x:Key="GreenButton.MouseOver.BackgroundBrush" Color="{StaticResource TertiaryGreenColor}"/>
     <SolidColorBrush x:Key="GreenButton.MouseOver.BorderBrush" Color="{StaticResource PrimaryGreenColor}"/>
@@ -234,9 +235,9 @@
     <Style x:Key="ActionButtonStyle" TargetType="{x:Type Button}">
         <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
         <Setter Property="Background" Value="{StaticResource GreenButton.Static.BackgroundBrush}"/>
-        <Setter Property="BorderBrush" Value="{StaticResource GreenButton.Static.BorderBrush}"/>
+        <Setter Property="BorderBrush" Value="{StaticResource GreenButton.Static.BlueBorderBrush}"/>
         <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
-        <Setter Property="BorderThickness" Value="2"/>
+        <Setter Property="BorderThickness" Value="3"/>
         <Setter Property="Margin" Value="5,10"/>
         <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
         <Setter Property="VerticalContentAlignment" Value="Center"/>
@@ -252,7 +253,7 @@
                 <AdornerDecorator>
                     <ContentPresenter/>
                 </AdornerDecorator>
-                <ResizeGrip x:Name="WindowResizeGrip" HorizontalAlignment="Right" IsTabStop="false" Visibility="Collapsed" VerticalAlignment="Bottom"/>
+                <ResizeGrip x:Name="windowResizeGrip" HorizontalAlignment="Right" IsTabStop="false" Visibility="Collapsed" VerticalAlignment="Bottom"/>
             </Grid>
         </Border>
         <ControlTemplate.Triggers>
@@ -261,7 +262,7 @@
                     <Condition Property="ResizeMode" Value="CanResizeWithGrip"/>
                     <Condition Property="WindowState" Value="Normal"/>
                 </MultiTrigger.Conditions>
-                <Setter Property="Visibility" TargetName="WindowResizeGrip" Value="Visible"/>
+                <Setter Property="Visibility" TargetName="windowResizeGrip" Value="Visible"/>
             </MultiTrigger>
         </ControlTemplate.Triggers>
     </ControlTemplate>

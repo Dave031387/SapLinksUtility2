@@ -28,8 +28,8 @@ namespace SapLinksUtility2
 
         private void DataElementButton_Click(object sender, RoutedEventArgs e)
         {
-            MaintenanceWindow maintenanceWindow = new MaintenanceWindow();
-            maintenanceWindow.ShowDialog();
+            DataFileWindow dataFileWindow = new DataFileWindow();
+            dataFileWindow.ShowDialog();
         }
     }
 }

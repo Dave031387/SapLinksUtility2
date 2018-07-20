@@ -9,7 +9,7 @@
       Title="WelcomePage" ScrollViewer.CanContentScroll="True" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto">
 
     <Grid>
-        <DockPanel x:Name="WelcomePage1">
+        <DockPanel x:Name="welcomePage">
             <TextBlock Style="{DynamicResource ToolTitleTextBlockStyle}" DockPanel.Dock="Top">
                 Welcome to the SAP Links Utility
             </TextBlock>
