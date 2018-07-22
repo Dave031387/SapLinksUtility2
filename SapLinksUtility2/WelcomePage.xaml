@@ -10,7 +10,7 @@
 
     <Grid>
         <DockPanel x:Name="welcomePage">
-            <TextBlock Style="{DynamicResource ToolTitleTextBlockStyle}" DockPanel.Dock="Top">
+            <TextBlock Style="{StaticResource ToolTitleTextBlockStyle}" DockPanel.Dock="Top">
                 Welcome to the SAP Links Utility
             </TextBlock>
             <TextBlock TextAlignment="Center" Foreground="{StaticResource MediumGreenBrush}" DockPanel.Dock="Top">

@@ -9,24 +9,24 @@
       Title="RepositoryToolPage">
     <Grid>
         <StackPanel>
-            <TextBlock Style="{DynamicResource ToolTitleTextBlockStyle}">Repository Maintenance</TextBlock>
-            <Button x:Name="dataElementButton" Style="{DynamicResource ToolsButtonStyle}" Click="DataElementButton_Click">
-                <TextBlock Style="{DynamicResource ToolButtonTextBlockStyle}">Data Elements</TextBlock>
+            <TextBlock Style="{StaticResource ToolTitleTextBlockStyle}">Repository Maintenance</TextBlock>
+            <Button x:Name="dataElementButton" Style="{StaticResource ToolsButtonStyle}" Click="DataElementButton_Click">
+                <TextBlock Style="{StaticResource ToolButtonTextBlockStyle}">Data Elements</TextBlock>
             </Button>
-            <Button Style="{DynamicResource ToolsButtonStyle}">
-                <TextBlock Style="{DynamicResource ToolButtonTextBlockStyle}">Tables</TextBlock>
+            <Button Style="{StaticResource ToolsButtonStyle}">
+                <TextBlock Style="{StaticResource ToolButtonTextBlockStyle}">Tables</TextBlock>
             </Button>
-            <Button Style="{DynamicResource ToolsButtonStyle}">
-                <TextBlock Style="{DynamicResource ToolButtonTextBlockStyle}">Table Elements</TextBlock>
+            <Button Style="{StaticResource ToolsButtonStyle}">
+                <TextBlock Style="{StaticResource ToolButtonTextBlockStyle}">Table Elements</TextBlock>
             </Button>
-            <Button Style="{DynamicResource ToolsButtonStyle}">
-                <TextBlock Style="{DynamicResource ToolButtonTextBlockStyle}">Unique Keys</TextBlock>
+            <Button Style="{StaticResource ToolsButtonStyle}">
+                <TextBlock Style="{StaticResource ToolButtonTextBlockStyle}">Unique Keys</TextBlock>
             </Button>
-            <Button Style="{DynamicResource ToolsButtonStyle}">
-                <TextBlock Style="{DynamicResource ToolButtonTextBlockStyle}">Foreign Keys</TextBlock>
+            <Button Style="{StaticResource ToolsButtonStyle}">
+                <TextBlock Style="{StaticResource ToolButtonTextBlockStyle}">Foreign Keys</TextBlock>
             </Button>
-            <Button Style="{DynamicResource ToolsButtonStyle}">
-                <TextBlock Style="{DynamicResource ToolButtonTextBlockStyle}">Default Sort Order</TextBlock>
+            <Button Style="{StaticResource ToolsButtonStyle}">
+                <TextBlock Style="{StaticResource ToolButtonTextBlockStyle}">Default Sort Order</TextBlock>
             </Button>
         </StackPanel>
     </Grid>

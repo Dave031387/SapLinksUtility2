@@ -56,6 +56,9 @@
     <SolidColorBrush x:Key="ToolsPageTitleBrush" Color="{StaticResource PrimaryBlueColor}"/>
     <SolidColorBrush x:Key="LightGreenBrush" Color="{StaticResource TertiaryGreenColor}"/>
     <SolidColorBrush x:Key="MediumGreenBrush" Color="{StaticResource PrimaryGreenColor}"/>
+    <SolidColorBrush x:Key="ControlsBorderBrush" Color="{StaticResource PrimaryBlueColor}"/>
+    <SolidColorBrush x:Key="RequiredLabelBrush" Color="Red"/>
+    <SolidColorBrush x:Key="OptionalLabelBrush" Color="Black"/>
     <LinearGradientBrush x:Key="PanelGradientBrush" EndPoint="0.5,1" StartPoint="0.5,0">
         <GradientStop Color="{StaticResource PrimaryGreenColor}" Offset="0"/>
         <GradientStop Color="#7FFFFFFF" Offset="1"/>
@@ -71,7 +74,7 @@
         </Border>
         <ControlTemplate.Triggers>
             <Trigger Property="IsDefaulted" Value="true">
-                <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource {x:Static SystemColors.HighlightBrushKey}}"/>
             </Trigger>
             <Trigger Property="IsMouseOver" Value="true">
                 <Setter Property="Background" TargetName="border" Value="{StaticResource GreenButton.MouseOver.BackgroundBrush}"/>
@@ -105,7 +108,7 @@
         </Border>
         <ControlTemplate.Triggers>
             <Trigger Property="IsDefaulted" Value="true">
-                <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource {x:Static SystemColors.HighlightBrushKey}}"/>
             </Trigger>
             <Trigger Property="IsMouseOver" Value="true">
                 <Setter Property="Background" TargetName="border" Value="{StaticResource BlueButton.MouseOver.BackgroundBrush}"/>
@@ -136,7 +139,7 @@
         </Border>
         <ControlTemplate.Triggers>
             <Trigger Property="IsDefaulted" Value="true">
-                <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource {x:Static SystemColors.HighlightBrushKey}}"/>
             </Trigger>
             <Trigger Property="IsMouseOver" Value="true">
                 <Setter Property="Background" TargetName="border" Value="{StaticResource BlueButton.MouseOver.BackgroundBrush}"/>
@@ -167,7 +170,7 @@
         </Border>
         <ControlTemplate.Triggers>
             <Trigger Property="IsDefaulted" Value="true">
-                <Setter Property="BorderBrush" TargetName="border" Value="{DynamicResource {x:Static SystemColors.HighlightBrushKey}}"/>
+                <Setter Property="BorderBrush" TargetName="border" Value="{StaticResource {x:Static SystemColors.HighlightBrushKey}}"/>
             </Trigger>
             <Trigger Property="IsMouseOver" Value="true">
                 <Setter Property="Background" TargetName="border" Value="{StaticResource GreenButton.MouseOver.BackgroundBrush}"/>
@@ -186,12 +189,42 @@
             </Trigger>
         </ControlTemplate.Triggers>
     </ControlTemplate>
+    <!-- Style definitions for controls on maintenance windows -->
+    <Style x:Key="OptionalLabelStyle" TargetType="{x:Type TextBlock}">
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Foreground" Value="{StaticResource OptionalLabelBrush}"/>
+        <Setter Property="FontWeight" Value="Bold"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="Margin" Value="5"/>
+        <Setter Property="MinWidth" Value="100"/>
+        <Setter Property="MaxWidth" Value="400"/>
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+    </Style>
+    <Style x:Key="RequiredLabelStyle" BasedOn="{StaticResource OptionalLabelStyle}" TargetType="{x:Type TextBlock}">
+        <Setter Property="Foreground" Value="{StaticResource RequiredLabelBrush}"/>
+        <Setter Property="TextDecorations" Value="Underline"/>
+    </Style>
+    <Style x:Key="EditTextBoxStyle" TargetType="{x:Type TextBox}">
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Margin" Value="5"/>
+        <Setter Property="MinWidth" Value="100"/>
+        <Setter Property="MaxWidth" Value="400"/>
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="BorderThickness" Value="3"/>
+        <Setter Property="BorderBrush" Value="{StaticResource ControlsBorderBrush}"/>
+    </Style>
+    <Style x:Key="EditWrappingTextBoxStyle" BasedOn="{StaticResource EditTextBoxStyle}" TargetType="{x:Type TextBox}">
+        <Setter Property="TextWrapping" Value="Wrap"/>
+        <Setter Property="AcceptsReturn" Value="True"/>
+    </Style>
     <!-- Style definition for the "Tools" button -->
     <Style x:Key="ToolButtonStyle" TargetType="{x:Type Button}">
         <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
         <Setter Property="Background" Value="{StaticResource GreenButton.Static.BackgroundBrush}"/>
         <Setter Property="BorderBrush" Value="{StaticResource GreenButton.Static.BorderBrush}"/>
-        <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+        <Setter Property="Foreground" Value="{StaticResource {x:Static SystemColors.ControlTextBrushKey}}"/>
         <Setter Property="BorderThickness" Value="2"/>
         <Setter Property="VerticalAlignment" Value="Top"/>
         <Setter Property="HorizontalAlignment" Value="Left"/>
@@ -206,7 +239,7 @@
         <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
         <Setter Property="Background" Value="{StaticResource BlueButton.Static.BackgroundBrush}"/>
         <Setter Property="BorderBrush" Value="{StaticResource BlueButton.Static.BorderBrush}"/>
-        <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+        <Setter Property="Foreground" Value="{StaticResource {x:Static SystemColors.ControlTextBrushKey}}"/>
         <Setter Property="BorderThickness" Value="2"/>
         <Setter Property="HorizontalContentAlignment" Value="Center"/>
         <Setter Property="VerticalContentAlignment" Value="Center"/>
@@ -221,7 +254,7 @@
         <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
         <Setter Property="Background" Value="{StaticResource BlueButton.Static.BackgroundBrush}"/>
         <Setter Property="BorderBrush" Value="{StaticResource BlueButton.Static.BorderBrush}"/>
-        <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+        <Setter Property="Foreground" Value="{StaticResource {x:Static SystemColors.ControlTextBrushKey}}"/>
         <Setter Property="BorderThickness" Value="2"/>
         <Setter Property="Margin" Value="5,0,35,10"/>
         <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
@@ -236,7 +269,7 @@
         <Setter Property="FocusVisualStyle" Value="{x:Null}"/>
         <Setter Property="Background" Value="{StaticResource GreenButton.Static.BackgroundBrush}"/>
         <Setter Property="BorderBrush" Value="{StaticResource GreenButton.Static.BlueBorderBrush}"/>
-        <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.ControlTextBrushKey}}"/>
+        <Setter Property="Foreground" Value="{StaticResource {x:Static SystemColors.ControlTextBrushKey}}"/>
         <Setter Property="BorderThickness" Value="3"/>
         <Setter Property="Margin" Value="5,10"/>
         <Setter Property="HorizontalContentAlignment" Value="Stretch"/>
@@ -268,7 +301,7 @@
     </ControlTemplate>
     <!-- Style definition for the main window -->
     <Style x:Key="MainWindowStyle" TargetType="{x:Type Window}">
-        <Setter Property="Foreground" Value="{DynamicResource {x:Static SystemColors.WindowTextBrushKey}}"/>
+        <Setter Property="Foreground" Value="{StaticResource {x:Static SystemColors.WindowTextBrushKey}}"/>
         <Setter Property="Background" Value="{StaticResource Window.BackgroundBrush}"/>
         <Setter Property="Template">
             <Setter.Value>
@@ -306,7 +339,7 @@
         <Setter Property="TextTrimming" Value="None"/>
         <Setter Property="FontSize" Value="36"/>
         <Setter Property="TextAlignment" Value="Center"/>
-        <Setter Property="Foreground" Value="{DynamicResource ToolsPageTitleBrush}"/>
+        <Setter Property="Foreground" Value="{StaticResource ToolsPageTitleBrush}"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
         <Setter Property="HorizontalAlignment" Value="Center"/>
         <Setter Property="Effect">

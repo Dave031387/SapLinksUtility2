@@ -9,15 +9,15 @@
       Title="SettingsToolPage">
     <Grid>
         <StackPanel>
-            <TextBlock Style="{DynamicResource ToolTitleTextBlockStyle}">Settings Tool</TextBlock>
-            <Button Style="{DynamicResource ToolsButtonStyle}">
-                <TextBlock Style="{DynamicResource ToolButtonTextBlockStyle}">Maintain Settings</TextBlock>
+            <TextBlock Style="{StaticResource ToolTitleTextBlockStyle}">Settings Tool</TextBlock>
+            <Button Style="{StaticResource ToolsButtonStyle}">
+                <TextBlock Style="{StaticResource ToolButtonTextBlockStyle}">Maintain Settings</TextBlock>
             </Button>
-            <Button Style="{DynamicResource ToolsButtonStyle}">
-                <TextBlock Style="{DynamicResource ToolButtonTextBlockStyle}">Export Settings</TextBlock>
+            <Button Style="{StaticResource ToolsButtonStyle}">
+                <TextBlock Style="{StaticResource ToolButtonTextBlockStyle}">Export Settings</TextBlock>
             </Button>
-            <Button Style="{DynamicResource ToolsButtonStyle}">
-                <TextBlock Style="{DynamicResource ToolButtonTextBlockStyle}">Import Settings</TextBlock>
+            <Button Style="{StaticResource ToolsButtonStyle}">
+                <TextBlock Style="{StaticResource ToolButtonTextBlockStyle}">Import Settings</TextBlock>
             </Button>
         </StackPanel>
     </Grid>

@@ -4,7 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="SAP Links Utility" Height="440" Width="800" Style="{DynamicResource MainWindowStyle}" MinWidth="800" MinHeight="440">
+        Title="SAP Links Utility" Height="440" Width="800" Style="{StaticResource MainWindowStyle}" MinWidth="800" MinHeight="440">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
@@ -15,7 +15,7 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Button x:Name="toolsButton" Grid.Column="0" Grid.Row="0" Content="Tools"
-                Style="{DynamicResource ToolButtonStyle}" Click="ToolsButton_Click">
+                Style="{StaticResource ToolButtonStyle}" Click="ToolsButton_Click">
             <Button.LayoutTransform>
                 <TransformGroup>
                     <RotateTransform Angle="-90"/>
@@ -26,23 +26,23 @@
                       CanContentScroll="True" Visibility="Collapsed">
             <StackPanel x:Name="toolsPanel" HorizontalAlignment="Left" Height="Auto" VerticalAlignment="Top" Width="Auto"
                     Orientation="Horizontal" CanHorizontallyScroll="True" ScrollViewer.CanContentScroll="True" Panel.ZIndex="99">
-                <Button x:Name="repositoryButton" Style="{DynamicResource CategoryButtonStyle}" Click="RepositoryButton_Click">
-                    <TextBlock Style="{DynamicResource CategoryTextBlockStyle}">Maintain<LineBreak/>Repository</TextBlock>
+                <Button x:Name="repositoryButton" Style="{StaticResource CategoryButtonStyle}" Click="RepositoryButton_Click">
+                    <TextBlock Style="{StaticResource CategoryTextBlockStyle}">Maintain<LineBreak/>Repository</TextBlock>
                 </Button>
-                <Button x:Name="sapInfoButton" Style="{DynamicResource CategoryButtonStyle}">
-                    <TextBlock Style="{DynamicResource CategoryTextBlockStyle}">Maintain<LineBreak/>SAP<LineBreak/>Information</TextBlock>
+                <Button x:Name="sapInfoButton" Style="{StaticResource CategoryButtonStyle}">
+                    <TextBlock Style="{StaticResource CategoryTextBlockStyle}">Maintain<LineBreak/>SAP<LineBreak/>Information</TextBlock>
                 </Button>
-                <Button x:Name="builderButton" Style="{DynamicResource CategoryButtonStyle}">
-                    <TextBlock Style="{DynamicResource CategoryTextBlockStyle}">Builder<LineBreak/>Tools</TextBlock>
+                <Button x:Name="builderButton" Style="{StaticResource CategoryButtonStyle}">
+                    <TextBlock Style="{StaticResource CategoryTextBlockStyle}">Builder<LineBreak/>Tools</TextBlock>
                 </Button>
-                <Button x:Name="utilityButton" Style="{DynamicResource CategoryButtonStyle}">
-                    <TextBlock Style="{DynamicResource CategoryTextBlockStyle}">Utility<LineBreak/>Tools</TextBlock>
+                <Button x:Name="utilityButton" Style="{StaticResource CategoryButtonStyle}">
+                    <TextBlock Style="{StaticResource CategoryTextBlockStyle}">Utility<LineBreak/>Tools</TextBlock>
                 </Button>
-                <Button x:Name="settingsButton" Style="{DynamicResource CategoryButtonStyle}" Click="SettingsButton_Click">
-                    <TextBlock Style="{DynamicResource CategoryTextBlockStyle}">Settings</TextBlock>
+                <Button x:Name="settingsButton" Style="{StaticResource CategoryButtonStyle}" Click="SettingsButton_Click">
+                    <TextBlock Style="{StaticResource CategoryTextBlockStyle}">Settings</TextBlock>
                 </Button>
-                <Button x:Name="aboutButton" Style="{DynamicResource CategoryButtonStyle}" Click="AboutButton_Click">
-                    <TextBlock Style="{DynamicResource CategoryTextBlockStyle}">About</TextBlock>
+                <Button x:Name="aboutButton" Style="{StaticResource CategoryButtonStyle}" Click="AboutButton_Click">
+                    <TextBlock Style="{StaticResource CategoryTextBlockStyle}">About</TextBlock>
                 </Button>
             </StackPanel>
         </ScrollViewer>
