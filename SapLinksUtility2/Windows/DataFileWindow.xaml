@@ -37,6 +37,9 @@
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
                 <TextBlock Grid.Column="0" Grid.Row="0" Style="{StaticResource RequiredLabelStyle}">
                     File Name
@@ -50,6 +53,22 @@
                     Description
                 </TextBlock>
                 <TextBox x:Name="descriptionTextBox" Grid.Column="1" Grid.Row="2" Style="{StaticResource EditWrappingTextBoxStyle}"/>
+                <TextBlock Grid.Column="0" Grid.Row="3" Style="{StaticResource OptionalLabelStyle}">
+                    Check box
+                </TextBlock>
+                <CheckBox x:Name="testCheckBox" Grid.Column="1" Grid.Row="3" Style="{StaticResource EditCheckBoxStyle}"/>
+                <TextBlock Grid.Column="0" Grid.Row="4" Style="{StaticResource OptionalLabelStyle}">
+                    Date Picker
+                </TextBlock>
+                <DatePicker x:Name="testDatePicker" Grid.Column="1" Grid.Row="4" Style="{StaticResource EditDatePickerStyle}"/>
+                <TextBlock Grid.Column="0" Grid.Row="5" Style="{StaticResource OptionalLabelStyle}">
+                    Combo Box
+                </TextBlock>
+                <ComboBox x:Name="testComboBox" Grid.Column="1" Grid.Row="5" Style="{StaticResource EditComboBoxStyle}">
+                    <ComboBoxItem>Item 1</ComboBoxItem>
+                    <ComboBoxItem>Item 2</ComboBoxItem>
+                    <ComboBoxItem>Item 3</ComboBoxItem>
+                </ComboBox>
             </Grid>
         </ScrollViewer>
         <Grid Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="3">

@@ -197,9 +197,7 @@
         <Setter Property="FontWeight" Value="Bold"/>
         <Setter Property="FontSize" Value="14"/>
         <Setter Property="Margin" Value="5"/>
-        <Setter Property="MinWidth" Value="100"/>
-        <Setter Property="MaxWidth" Value="400"/>
-        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="HorizontalAlignment" Value="Right"/>
     </Style>
     <Style x:Key="RequiredLabelStyle" BasedOn="{StaticResource OptionalLabelStyle}" TargetType="{x:Type TextBlock}">
         <Setter Property="Foreground" Value="{StaticResource RequiredLabelBrush}"/>
@@ -218,6 +216,32 @@
     <Style x:Key="EditWrappingTextBoxStyle" BasedOn="{StaticResource EditTextBoxStyle}" TargetType="{x:Type TextBox}">
         <Setter Property="TextWrapping" Value="Wrap"/>
         <Setter Property="AcceptsReturn" Value="True"/>
+    </Style>
+    <Style x:Key="EditCheckBoxStyle" TargetType="{x:Type CheckBox}">
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Margin" Value="5"/>
+        <Setter Property="BorderThickness" Value="3"/>
+        <Setter Property="BorderBrush" Value="{StaticResource ControlsBorderBrush}"/>
+    </Style>
+    <Style x:Key="EditDatePickerStyle" TargetType="DatePicker">
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Margin" Value="5"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="MinWidth" Value="120"/>
+        <Setter Property="BorderThickness" Value="3"/>
+        <Setter Property="BorderBrush" Value="{StaticResource ControlsBorderBrush}"/>
+    </Style>
+    <Style x:Key="EditComboBoxStyle" TargetType="ComboBox">
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Margin" Value="5"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="MinWidth" Value="120"/>
+        <Setter Property="BorderThickness" Value="3"/>
+        <Setter Property="BorderBrush" Value="{StaticResource ControlsBorderBrush}"/>
+        <Setter Property="ClipToBounds" Value="True"/>
+        <Setter Property="IsEditable" Value="True"/>
     </Style>
     <!-- Style definition for the "Tools" button -->
     <Style x:Key="ToolButtonStyle" TargetType="{x:Type Button}">
