@@ -4,6 +4,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SapLinksUtility2.Windows"
+        xmlns:saplinksutility2="clr-namespace:SapLinksUtility2"
         mc:Ignorable="d"
         Title="Maintain Data Files" Height="600" Width="1000" Style="{StaticResource MainWindowStyle}">
     <Grid>
@@ -40,6 +41,8 @@
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
                     <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
                 <TextBlock Grid.Column="0" Grid.Row="0" Style="{StaticResource RequiredLabelStyle}">
                     File Name
@@ -69,6 +72,14 @@
                     <ComboBoxItem>Item 2</ComboBoxItem>
                     <ComboBoxItem>Item 3</ComboBoxItem>
                 </ComboBox>
+                <TextBlock Grid.Column="0" Grid.Row="6" Style="{StaticResource OptionalLabelStyle}">
+                    Password Box
+                </TextBlock>
+                <PasswordBox Grid.Column="1" Grid.Row="6" Style="{StaticResource EditPasswordBoxStyle}"/>
+                <TextBlock Grid.Column="0" Grid.Row="7" Style="{StaticResource OptionalLabelStyle}">
+                    Alt Password Box
+                </TextBlock>
+                <saplinksutility2:EnhancedPasswordBox Grid.Column="1" Grid.Row="7"/>
             </Grid>
         </ScrollViewer>
         <Grid Grid.Column="0" Grid.Row="2" Grid.ColumnSpan="3">

@@ -191,7 +191,6 @@
     </ControlTemplate>
     <!-- Style definitions for controls on maintenance windows -->
     <Style x:Key="OptionalLabelStyle" TargetType="{x:Type TextBlock}">
-        <Setter Property="HorizontalAlignment" Value="Left"/>
         <Setter Property="VerticalAlignment" Value="Center"/>
         <Setter Property="Foreground" Value="{StaticResource OptionalLabelBrush}"/>
         <Setter Property="FontWeight" Value="Bold"/>
@@ -240,8 +239,20 @@
         <Setter Property="MinWidth" Value="120"/>
         <Setter Property="BorderThickness" Value="3"/>
         <Setter Property="BorderBrush" Value="{StaticResource ControlsBorderBrush}"/>
+        <Setter Property="IsSynchronizedWithCurrentItem" Value="True"/>
         <Setter Property="ClipToBounds" Value="True"/>
         <Setter Property="IsEditable" Value="True"/>
+    </Style>
+    <Style x:Key="EditPasswordBoxStyle" TargetType="PasswordBox">
+        <Setter Property="HorizontalAlignment" Value="Left"/>
+        <Setter Property="VerticalAlignment" Value="Center"/>
+        <Setter Property="Margin" Value="5"/>
+        <Setter Property="FontSize" Value="14"/>
+        <Setter Property="MinWidth" Value="100"/>
+        <Setter Property="MaxWidth" Value="400"/>
+        <Setter Property="BorderThickness" Value="3"/>
+        <Setter Property="BorderBrush" Value="{StaticResource ControlsBorderBrush}"/>
+        <Setter Property="CaretBrush" Value="Red"/>
     </Style>
     <!-- Style definition for the "Tools" button -->
     <Style x:Key="ToolButtonStyle" TargetType="{x:Type Button}">
